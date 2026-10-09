@@ -42,6 +42,10 @@ Table 1. Quantitative comparison with other state-of-the-art real-time object de
 
 Use the following code to validate the YOLO_Comp models on the COCO dataset.
 
+Pretrained checkpoints:
+- YOLO_Comp-N: [YOLO_Comp_N.pt](https://github.com/zhx-hub/YOLO_Comp/raw/main/weights/YOLO_Comp_N.pt)
+- YOLO_Comp-S: [YOLO_Comp_S.pt](https://github.com/zhx-hub/YOLO_Comp/raw/main/weights/YOLO_Comp_S.pt)
+
 ```python
 from ultralytics import YOLO
 
