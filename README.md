@@ -56,9 +56,9 @@ model = YOLO('weights/YOLO_Comp_N.pt')  # YOLO_Comp_S.pt for small version
 metrics = model.val(data='coco.yaml')
 print(metrics.box.map)    # mAP@0.95
 print(metrics.box.map50)  # mAP@0.5
+```
 
-
-## 4 Train
+## 4. Train
 
 Use the following code to train the YOLO_Comp models
 
