@@ -35,3 +35,20 @@ Table 1. Quantitative comparison with other state-of-the-art real-time object de
 
 ## 2. Visualizations
 ![Visualization examples of our, YOLO11-N/S, YOLOv12-N/S, and YOLOv13-N/S.](assets/visualization.jpg)
+
+## 3. Validation
+
+**YOLO_Comp-N | YOLO_Comp-S**
+
+Use the following code to validate the YOLO_Comp models on the COCO dataset.
+
+```python
+from ultralytics import YOLO
+
+# Load checkpoint
+model = YOLO('weights/YOLO_Comp_N.pt')  # YOLO_Comp_S.pt for small version
+
+# Run validation
+metrics = model.val(data='coco.yaml')
+print(metrics.box.map)    # mAP@0.95
+print(metrics.box.map50)  # mAP@0.5
