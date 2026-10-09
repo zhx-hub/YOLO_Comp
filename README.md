@@ -61,7 +61,7 @@ print(metrics.box.map50)  # mAP@0.5
 ## 4. Train
 
 Use the following code to train the YOLO_Comp models
-
+```python
 from ultralytics import YOLO
 
 # Build model from your custom yaml config
@@ -82,3 +82,4 @@ results = model.train(
 
 # Evaluate model performance on the validation set
 metrics = model.val('coco.yaml')
+```
