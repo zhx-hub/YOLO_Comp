@@ -34,4 +34,4 @@ Table 1. Quantitative comparison with other state-of-the-art real-time object de
 
 
 ## 2. Visualizations
-![Visualization examples of our, YOLO11-N/S, YOLOv12-N/S, and YOLOv13-N/S.](assets/visualization.png)
+![Visualization examples of our, YOLO11-N/S, YOLOv12-N/S, and YOLOv13-N/S.](assets/visualization.jpg)
