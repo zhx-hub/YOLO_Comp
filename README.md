@@ -56,3 +56,29 @@ model = YOLO('weights/YOLO_Comp_N.pt')  # YOLO_Comp_S.pt for small version
 metrics = model.val(data='coco.yaml')
 print(metrics.box.map)    # mAP@0.95
 print(metrics.box.map50)  # mAP@0.5
+
+
+## 4 Train
+
+Use the following code to train the YOLO_Comp models
+
+from ultralytics import YOLO
+
+# Build model from your custom yaml config
+model = YOLO('yolo_comp_n.yaml')
+
+# Train the model
+results = model.train(
+    data='coco.yaml',
+    epochs=600,
+    batch=256,
+    imgsz=640,
+    scale=0.5,    # For S:0.9; L:0.9
+    mosaic=1.0,
+    mixup=0.0,    # For S:0.05; L:0.15
+    copy_paste=0.1, # For S:0.15; L:0.5
+    device="0,1,2,3",
+)
+
+# Evaluate model performance on the validation set
+metrics = model.val('coco.yaml')
